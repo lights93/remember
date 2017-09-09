@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.minho.remember">
+
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.LOCATION_HARDWARE" />
+
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+
+    <application
+        android:name=".local"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".MonthActivity" />
+        <activity android:name=".WeekActivity" />
+        <activity android:name=".OptionActivity"
+            />
+        <activity android:name=".camera"
+            android:theme="@android:style/Theme.Dialog" />
+        <activity android:name=".voice"
+            android:theme="@android:style/Theme.Dialog"/>
+        <activity
+            android:name=".option_dialog"
+            android:theme="@android:style/Theme.Dialog" />
+
+        <activity
+            android:name=".DialogActivity"
+            android:label="@string/title_activity_dialog"
+            android:theme="@android:style/Theme.Dialog" />
+        <activity android:name=".TodayActivity"></activity>
+        
+        <receiver
+            android:name=".BroadReceiver"
+            android:enabled="true"
+            android:exported="true"></receiver>
+    </application>
+
+</manifest>
